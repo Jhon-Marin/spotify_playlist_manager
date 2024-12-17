@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Spotify Account</title>
+</head>
+<body>
+    <h1>Search Spotify Account</h1>
+    <form action="{% url 'list_account_playlists' %}" method="get">
+        <label for="username">Spotify Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Search</button>
+    </form>
+    <a href="{% url 'index' %}"><button>Back to Home</button></a>
+</body>
+</html>
+
+

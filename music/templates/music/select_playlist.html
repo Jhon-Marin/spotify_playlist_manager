@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Playlist</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <h1>Select Playlist to Like Songs From</h1>
+    <form action="{% url 'like_songs_from_playlist' %}" method="get">
+        <label for="playlist_id">Select Playlist ID:</label>
+        <select name="playlist_id" id="playlist_id">
+            {% for playlist_id in playlist_ids %}
+                <option value="{{ playlist_id }}">{{ playlist_id }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Like Songs</button>
+    </form>
+    <a href="{% url 'index' %}"><button>Back to Home</button></a>
+</body>
+</html>
+

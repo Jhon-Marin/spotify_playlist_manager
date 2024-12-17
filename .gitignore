@@ -1,0 +1,9 @@
+.env
+build/
+dist/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Pipfile
+Pipfile.lock

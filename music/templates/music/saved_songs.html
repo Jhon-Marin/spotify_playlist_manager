@@ -1,0 +1,16 @@
+<!-- templates/music/saved_songs.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Liked Songs</title>
+</head>
+<body>
+    <h1>Saved Liked Songs</h1>
+    <ul>
+    {% for song in songs %}
+        <li>{{ song.track.name }} by {{ song.track.artists.0.name }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}"><button>Back to Home</button></a>
+</body>
+</html>

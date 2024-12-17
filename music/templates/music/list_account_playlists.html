@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Playlists</title>
+</head>
+<body>
+    <h1>Public Playlists for {{ username }}</h1>
+    <ul>
+    {% for playlist in playlists %}
+        <li>
+            {{ playlist.name }} ({{ playlist.id }})
+            <a href="{% url 'like_songs_from_playlist' %}?playlist_id={{ playlist.id }}"><button>Like Songs</button></a>
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'search_account' %}"><button>Search Another Account</button></a>
+</body>
+</html>
+

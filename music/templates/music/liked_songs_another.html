@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liked Songs in Another Account</title>
+</head>
+<body>
+    <h1>Liked Songs in Your New Account</h1>
+    <ul>
+    {% for track_id in track_ids %}
+        <li>Track ID: {{ track_id }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}"><button>Back to Home</button></a>
+</body>
+</html>
